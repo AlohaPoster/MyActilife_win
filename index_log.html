@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>登录界面</title>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+#wrap {
+	height: 550px;
+	width: 100;
+	background-image: url('./resources/logback.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+}
+#head {
+	height: 125px;
+    width: 100;
+    background-color: #CC0033;
+	text-align: center;
+	position: relative;
+}
+#foot {
+    height: 125px;
+	width: 100;
+	background-color: #6495ED;
+	position: relative;
+}
+#wrap .logGet {
+	height: 500px;
+	width: 400px;  
+	position: absolute;
+	background-color: #FFFFFF;
+    top: 10%;
+    right: 8%;
+}
+.logC button {
+	width: 100%;
+	height: 45px;
+	background-color: #ee7700;
+	border: 2px;
+	color: #000000;
+	font-size: 18px;
+}
+.logGet .logD.logDtip .p1 {
+	display: inline-block;
+	font-size: 28px;
+	margin-top: 30px;
+	width: 86%;
+}
+#wrap .logGet .logD.logDtip {
+    width: 86%;
+    text-align: center;
+	border-bottom: 2px solid #ee7700;
+	margin-bottom: 40px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.logGet .lgD img {
+	position: absolute;
+	top: 12px;
+	left: 8px;
+}
+.logGet .lgD input {
+	width: 100%;
+	height: 42px;
+	text-indent: 2.5rem;
+}
+#wrap .logGet .lgD {
+	width: 86%;
+	position: relative;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#wrap .logGet .logC {
+    width: 86%;
+    font-family: "宋体";
+    font-weight: bold;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-left: auto;
+}
+ 
+ 
+.title {
+    position: absolute;
+    font-size: 45px;
+    font-family: Arial;
+    color: #ffffff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); 
+	height: 50px;
+	width: 40%;
+}
+ 
+.copyright {
+	font-family: "宋体";
+	color: #000000;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);  
+	height: 60px;
+	width: 40%;
+	text-align:center;
+}
+	
+ 
+#foot .copyright .img {
+	width: 100%;
+	height: 24px;
+	position: relative;
+}
+.copyright .img .icon {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-left: 22px;
+	vertical-align: middle;
+	background-image: url('./resources/mailbox.png');
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+	
+.copyright .img .icon1 {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-left: 22px;
+	vertical-align: middle;
+	background-image: url('./resources/location.png');
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+#foot .copyright p {
+	height: 24px;
+	width: 100%;
+}
+</style>
+</head>
+ 
+<body>
+<div class="header" id="head">
+  <div class="title">MyActilife </div>
+	
+</div>
+	
+<div class="wrap" id="wrap">
+	<div class="logGet">
+
+			<div class="logD logDtip">
+				<p class="p1">登录</p>
+			</div>
+
+			<div class="lgD">
+				<img src="./resources/user.png" width="20" height="20" alt=""/>
+				<input type="text" id='nameinput'
+					placeholder="输入用户名" />
+            </div>
+            
+			<div class="lgD">
+				<img src="./resources/password.png" width="20" height="20" alt=""/>
+				<input type="password" id='passwordinput'
+					placeholder="输入用户密码" />
+            </div>
+            
+			<div class="logC">
+				<button id='login'>登录</button>
+            </div>
+
+            <div class="logC">
+                <button id='registe'>申请账户</button>
+            </div>
+
+		</div>
+</div>
+	
+<div class="footer" id="foot">
+  <div class="copyright">
+    <p>CPAT Intelligent Motion Analysis Software: MyActilife </p>
+    <div class="img">
+		<i class="icon"></i><span>Connect Me：zhangr102495@gamil.com</span>
+	</div>
+	
+	<div class="img">
+		<i class="icon1"></i><span>测试版本v1.0.0</span>
+	</div>
+	  
+  </div>
+	
+</div>
+	
+	
+</body>
+<script>
+    require('./render_log.js')
+</script>
+
+</html>

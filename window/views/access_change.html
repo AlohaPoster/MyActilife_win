@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../../jsonediterjs/jsoneditor.css">
+        <style type="text/css">
+         *{
+            margin: 0px;
+            padding: 0px;
+        }
+        table
+        {	
+			border: 2px;
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+        table td, table th
+        {
+            border: 1px solid #cad9ea;
+            color: #666;
+            height: 30px;
+        }
+        table thead th
+        {
+            background-color: #CCE8EB;
+            width: 90px;
+        }
+        .tadd
+		{
+			position: absolute;
+			top: 60px;
+			left: 30px;
+			width: 80%;
+
+		}
+        .title
+        {
+            position: absolute;
+            top: 20px;
+            left:90px;
+
+        }
+        .title p
+        {
+            font-size: 18px;
+            color: darkgrey;
+        }
+        .tadd button
+        {
+            margin: 80 auto;
+            left: 25%;
+			font-size: 14px;
+            font-family: "黑体";
+            color: rgb(75, 7, 7);
+            width: 30%;
+            height: 20px;
+            text-align: center;
+            border:1px solid #1e7db9;
+            box-shadow: 0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;
+            background: -webkit-linear-gradient(top,#42a4e0,#2e88c0);
+            background: -moz-linear-gradient(top,#42a4e0,#2e88c0);
+            background: linear-gradient(top,#42a4e0,#2e88c0);
+        }
+        </style>
+    </head>
+    <body background="../../resources/background.png">
+        <div class = 'title'>
+            <p id = "rolename"></p>
+        </div>
+       
+        <div class="tadd">
+            <table id="access">
+                <thead>
+                <tr>
+                        <th>资源操控方式</th>
+                        <th>资源名称</th>
+                        <th>分配权限</th>
+                </tr>
+                </thead>
+                <tbody id ="accessbody">
+
+                </tbody>
+            </table>
+            <!-- </div>
+    <div class = "footbutton"> -->
+        <button id="return">回滚</button>
+        <button id="finish">确定</button>
+        <button id="kill">取消</button>
+    </div>
+    </body>
+    <script>
+        require("../controllers/access_change_render.js")
+    </script>
+</html>

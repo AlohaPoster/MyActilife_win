@@ -1,0 +1,109 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#wrap {
+	height: 525px;
+	width: 100;
+	position: relative;
+}
+#head {
+	height: 125px;
+    width: 100;
+    background-color: #CC0033;
+	text-align: center;
+	position: relative;
+}
+#foot {
+    height: 100px;
+	width: 100;
+	background-color: #6495ED;
+	position: relative;
+}
+#wrap .infoGet {
+	height: 525px;
+	width: 400px;  
+	position: absolute;
+	background-color: #FFFFFF;
+    top: 4%;
+    right: 16%;
+}
+.infoGet .lg button {
+	width: 100%;
+	height: 45px;
+	background-color: #ee7700;
+	border: 2px;
+	color: #000000;
+	font-size: 18px;
+}
+.infoGet .log.logtip .p1 {
+	display: inline-block;
+	font-size: 28px;
+	margin-top: 0px;
+	width: 86%;
+}
+.infoGet .log.logtip {
+    width: 86%;
+    text-align: center;
+	border-bottom: 2px solid #ee7700;
+	margin-bottom: 30px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.infoGet .lg input {
+	width: 100%;
+	height: 36px;
+	text-indent: 2.5rem;
+}
+.infoGet .lg select{
+	width: 100%;
+	height: 42px;
+	text-indent: 2.5rem;
+}
+.infoGet .lg {
+	width: 86%;
+	position: relative;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.title {
+    position: absolute;
+    font-size: 45px;
+    font-family: Arial;
+    color: #ffffff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); 
+	height: 50px;
+	width: 40%;
+}
+ 
+.help {
+	font-family: "宋体";
+	color: #000000;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);  
+	height: 60px;
+	width: 40%;
+	text-align:center;
+}
+	
+#foot .help p {
+	height: 24px;
+	width: 100%;
+}
+
+#foot .help button{
+	height: 30px;
+	background-color:  #6495ED;
+	border: none;
+	color: #000000;
+	font-size: 24px;
+}

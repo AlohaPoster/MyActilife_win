@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../styles/register_window.css" rel="stylesheet">
+        <meta charset = "utf-8">
+        <title>注册页面</title>
+
+    </head>
+
+    <body>
+    <div class="header" id="head">
+        <div class="title">Register</div>
+    </div>
+
+    <div class = "wrap" id = "wrap">
+        <div class = "infoGet">
+            <div class="log logtip">
+                <p class="p1">注册</p>
+            </div>
+
+            <div class = "lg">
+                <input type ="text" id="nameinput"
+                    placeholder="输入用户名 长度5-14" >
+            </div>
+
+            <div class = "lg">
+                <input type ="text" id="mailinput"
+                    placeholder="输入邮箱" >
+            </div>
+
+            <div class = "lg">
+                <input type ="password" id='passwordfirst'
+                placeholder="输入密码 长度5-11">
+            </div>
+
+            <div class = 'lg'>
+                <input type ="password" id='passwordsecond'
+                placeholder="确认密码">
+            </div>
+            
+            <div class = 'lg'>
+                <select id='identity'>
+                    <option value="1">安全管理员</option>
+                    <option value="2">研究组长</option>
+                    <option value='3'>研究小组人员</option>
+                    <option value='4'>用户</option>
+                </select>
+            </div>
+            
+            <div class = 'lg'>
+                <button id='register'>确认申请</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer" id="foot">
+        <div class="help">
+            <p>For more information: </p>
+            <button id='helphere'>GetHelpHere</button>
+        </div>
+    </div>
+
+    </body>
+    <script>
+        require('../controllers/register_window_render.js')
+    </script>
+
+</html>

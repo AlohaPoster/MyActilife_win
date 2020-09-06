@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>主界面</title>
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .main_left{
+                width: 180px;
+                float: left;
+                height: 800px;
+                background-color: rgb(193, 54, 235);
+                top: none;
+                left: none;
+            }
+            .left_title{
+                position: absolute;
+                font-size: 24px;
+                font-family: Arial;
+                color: #ffffff;
+	            top: 30px;
+                left: 35px;
+	            height: 50px;
+            }
+            .foot_title{
+                position: absolute;
+                font-size: 10px;
+                font-family: Arial;
+                color: #ffffff;
+                top: 750px;
+
+            }
+            .main_right{
+                width: 1200px;
+                height: 800px;
+                margin-left: 180;   
+            }
+            #webview{
+                height: 800px;
+            }
+            .first_button{
+                top: 100px;
+                position: absolute;
+            }
+            .second_button{
+                top: 140px;
+                position: absolute;
+            }
+            .third_button{
+                top: 180px;
+                position: absolute;
+            }
+            .fourth_button{
+                top: 220px;
+                position: absolute;
+            }
+            .fifth_button{
+                top: 260px;
+                position: absolute;
+            }
+            .sixth_button{
+                top: 300px;
+                position: absolute;
+            }
+            .main_left button{
+                width: 180px;
+                height: 40px;
+                top: 100px;
+                font-family: "宋体";
+                background-color: rgb(67, 197, 100);
+                border: #000000;
+            }
+            .main_left img{
+                position: absolute;
+                top: 12px;
+                left: 8px;
+            }
+            </style>
+    </head>
+    <body>
+        <div class="main_left" >
+            <div class="left_title">MyActilife</div>
+                <div class="first_button">
+                    <img src="../icon/user.png" width="20" height="20" alt=""/>
+                    <button id="one" data-src="./user_info_m.html">用户信息</button>
+                </div>
+                <div class="second_button">
+                    <img src="../../resources/process.png" width="20" height="20" alt=""/>
+                    <button id="two" data-src="https://www.baidu.com/">设备数据处理</button>
+                </div>
+                <div class="third_button">
+                    <img src="../../resources/find.png" width="20" height="20" alt=""/>
+                    <button id="three" data-src="https://www.baidu.com/">数据查询</button>
+                </div>
+                <div class="fourth_button">
+                    <img src="../../resources/access.png" width="20" height="20" alt=""/>
+                    <button id="four" data-src="https://www.baidu.com/">用户权限管理</button>
+                </div>
+                <div class="fifth_button">
+                    <img src="../../resources/help.png" width="20" height="20" alt=""/>
+                    <button id="five" data-src="https://www.baidu.com/">设备使用帮助</button>
+                </div>
+                <div class="sixth_button">
+                    <img src="../../resources/about.png" width="20" height="20" alt=""/>
+                    <button id="six" data-src="https://www.baidu.com/">关于MyActilife</button>
+                </div>
+                <div class= "foot_title">系统版本v1.0.0</div>
+        </div>
+        
+        <!--div class="main_right">
+        <webview id="webview"  src="https://www.baidu.com/"  nodeintegration></webview>
+        </!--div-->
+    </body>
+    <!--script src="https://code.jquery.com/jquery-2.2.0.min.js"></!--script>
+    <script>if (typeof module === 'object') {window.jQuery = window.$ = module.exports;};</script>
+    <script>
+     $(function(){
+            $(".main_left button").on("click",function(){
+                var address =$(this).attr("data-src");
+                $("webview").attr("src",address);
+            });
+                 });
+    </script-->
+    <script>
+        require('../controllers/main_window_render.js')
+    </script>
+</html>

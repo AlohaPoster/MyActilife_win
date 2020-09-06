@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+        *{
+			margin: 0px;
+            padding: 0px;
+		}
+		.title{
+            font-size:24px;
+            font-family: "宋体";
+            position: absolute;
+            top:30px;
+            left:20px;
+        }
+        table
+        {	
+			border: 2px;
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+        table td, table th
+        {
+            border: 1px solid #cad9ea;
+            color: #666;
+            height: 30px;
+        }
+        table thead th
+        {
+            background-color: #CCE8EB;
+            width: 100px;
+        }
+        .pages #pagestate
+		{	
+
+			text-align: center;
+			font-size: smaller;
+		}
+		.pages
+		{	
+			position: absolute;
+			top: 130px;
+			left: 410px;
+			text-align: center;
+			font-size: smaller;
+			width: 65px;
+			height: 10px;
+		}
+        .pages p
+        {
+            position: absolute;
+			left :20px;
+			float:top;
+        }
+		.pages #lastpage
+		{
+			border: none;
+			float:left;
+			width: 10px;
+			height: 20px;
+            text-align: center;
+            border:1px solid #1e7db9;
+            box-shadow: 0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;
+            background: -webkit-linear-gradient(top,#42a4e0,#2e88c0);
+            background: -moz-linear-gradient(top,#42a4e0,#2e88c0);
+            background: linear-gradient(top,#42a4e0,#2e88c0);
+		}
+		.pages #nextpage
+		{
+			border: none;
+			float: right;
+			width: 12px;
+			height: 20px;
+            text-align: center;
+            border:1px solid #1e7db9;
+            box-shadow: 0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;
+            background: -webkit-linear-gradient(top,#42a4e0,#2e88c0);
+            background: -moz-linear-gradient(top,#42a4e0,#2e88c0);
+            background: linear-gradient(top,#42a4e0,#2e88c0);
+			
+		}
+        .aim
+		{
+			position: absolute;
+			top:90px;
+			left:360px;
+			text-align: center;
+		}
+		.tadd
+		{
+			position: absolute;
+			top: 150px;
+			left: 80px;
+			width: 75%;
+
+		}
+		.aim button
+		{	
+			
+			margin: 0 auto;
+			font-size: 14px;
+            font-family: "黑体";
+            color: rgb(75, 7, 7);
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            border:1px solid #1e7db9;
+            box-shadow: 0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;
+            background: -webkit-linear-gradient(top,#42a4e0,#2e88c0);
+            background: -moz-linear-gradient(top,#42a4e0,#2e88c0);
+            background: linear-gradient(top,#42a4e0,#2e88c0);
+		}
+        .search_info
+        {
+            position: absolute;
+            right: 60px;
+            top: 160px;
+            width: 100px;
+        }
+        .search_info .tit
+        {
+            font-size: 22px;
+            color: rgb(24, 22, 22);
+            text-align: center;
+        }
+        .search_info p
+        {
+            font-size: 17px;
+            color: rgb(165, 157, 157);
+            font-family: "宋体";
+        }
+        .search_info input
+        {
+            height: 24px;
+        }
+        .ppath
+        {
+            position: absolute;
+            top:660px;
+            right:10px;
+            width:270px;
+        }
+        .ppath p
+        {
+            font-size: 18px;
+            color: rgb(165, 157, 157);
+            font-family: "宋体";
+        }
+        .ppath input
+        {
+            height: 28px;
+        }
+        .pic 
+        {
+            position: absolute;
+            top:720px;
+            right:240px;
+            width: 40px;
+            height: 40px;
+        }
+        .pictip
+        {
+            position: absolute;
+            top:720px;
+            right:60px;
+            font-size: 25px;
+            font-family: "宋体";
+            color: darkgrey;
+        }
+        </style>
+    </head>
+    <body background="../../resources/background.png">
+        <div class = title>
+            <p>设备数据查询</p>
+        <hr style="top:93px;height:5px;border:none;border-top:7px ridge red;"/>
+        </div>
+
+        <div class = "aim">
+        <button id = "mine">查询我的数据</button>
+        <button id = "search">按条件查询</button>
+        </div>
+
+    <div class="search_info">
+        <div>
+            <p class="tit">
+                查询条件
+            </p>
+            <br>
+            <p>上传者账户</p>
+            <input type="text" id="uploader" placeholder="默认全部" />
+            <br>
+            <p>测试日期</p>
+            <input type="text" id="startdate" placeholder="默认全部" />
+            <br>
+            <p>测试者编号</p>
+            <input type="text" id="userid" placeholder="多编号用逗号隔开" />
+            <br>
+            <p>设备编号</p>
+            <input type="text" id="deviceid" placeholder="多编号使用逗号隔开" />
+            <br>
+            
+        </div>
+    </div>
+
+    <div class = "ppath">
+        <p width="100%">下载文件绝对路径</p>
+            <input type="text" id="downpath" width = "100%" placeholder="默认为/" />
+    </div>
+
+    <div class="pages">
+        <button id="lastpage"><</button>
+        <p id = "pagestate">0/0页</p>
+        <button id="nextpage">></buuton>
+    </div>
+
+    <div class="tadd">
+        <table id="resulttable">
+            <thead>
+                <tr>
+                    <th>数据编号</th>
+                    <th>上传者</th>
+                    <th>设备编号</th>
+                    <th>测试者编号</th>
+                    <th>上传日期</th>
+                    <th>原始数据</th>
+                    <th>数据处理结果</th>
+                </tr>
+            </thead>
+            <tbody id = "resulttablebody">
+
+			</tbody>
+        </table>
+    </div>
+
+    <img class = "pic" id="pic" src="../../resources/coffee.png" width ="40px" height="40px" alt="" />
+    <p class="pictip" id="pictip">当前无下载任务</p>
+    </body>
+    <script>
+        require('../controllers/data_search_m_render.js')
+    </script>
+</html>

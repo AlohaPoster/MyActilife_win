@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .pic{
+            position: absolute;
+            top: 120px;
+            left: 220px;
+            width: 40px;
+            height: 40px;
+        }
+        .title{
+            position: absolute;
+            top:120px;
+            left:280px;
+            font-size:28px;
+            font-family: "宋体";
+            color: black;
+        }
+        .report{
+            position: absolute;
+            width: 860px;
+            height: 590px;
+            align-self: center;
+            top:180px;
+            left : 70px;
+        }
+        .title1{
+            font-size:24px;
+            font-family: "宋体";
+            position: absolute;
+            top:30px;
+            left:20px;
+        }
+        </style>
+    </head>
+    <body background="../../resources/background.png">
+        <div class = "title1">
+            <p>数据导出结果</p>
+        <hr style="top:93px;height:5px;border:none;border-top:7px ridge red;"/>
+        </div>
+
+            <img class="pic" id = "waitimage" src="../../resources/loading.gif" width ="40px" height="40px" alt="" />
+            <p class="title" id = "tips">正在导出数据,请等待......</p>
+        <div class = "report" >
+            <iframe src="" class="pdf" id="pdff" width="100%" height="100%"></iframe>
+        </div>
+    </body>
+    <!--script src="/js/pdfobject.js"></script>
+    <script>PDFObject.embed("/pdf/sample-3pp.pdf", "#example1");</script-->
+    <script>
+        require('../controllers/processing_result_m_render.js')
+    </script>
+</html>

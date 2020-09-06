@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style type="text/css">
+		*{
+			margin: 0px;
+            padding: 0px;
+		}
+		.title{
+            font-size:24px;
+            font-family: "宋体";
+            position: absolute;
+            top:30px;
+            left:20px;
+        }
+		table
+        {	
+			border: 2px;
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+        table td, table th
+        {
+            border: 1px solid #cad9ea;
+            color: #666;
+            height: 30px;
+        }
+		table td
+        {
+            background-color: #CCE8EB;
+        }
+        table thead th
+        {
+            background-color: #CCE8EB;
+            width: 100px;
+        }
+		.rightup button
+		{	
+			position: absolute;
+			top: 40px;
+    		right: 50px;
+			width: 10%;
+			background-color: #6495ED;
+		}
+		
+		.aim
+		{
+			position: absolute;
+			top:90px;
+			left:300px;
+			text-align: center;
+		}
+		.tadd
+		{
+			position: absolute;
+			top: 150px;
+			left: 80px;
+			width: 75%;
+
+		}
+		.aim button
+		{	
+			
+			margin: 0 auto;
+			font-size: 14px;
+            font-family: "黑体";
+			color: rgb(75, 7, 7);
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            border:1px solid #1e7db9;
+            box-shadow: 0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;
+            background: -webkit-linear-gradient(top,#42a4e0,#2e88c0);
+            background: -moz-linear-gradient(top,#42a4e0,#2e88c0);
+            background: linear-gradient(top,#42a4e0,#2e88c0);
+		}
+		.pages #pagestate
+		{	
+
+			text-align: center;
+			font-size: smaller;
+		}
+		.pages
+		{	
+			position: absolute;
+			top: 130px;
+			left: 350px;
+			text-align: center;
+			font-size: smaller;
+			width: 65px;
+			height: 10px;
+		}
+		.pages p
+		{
+			position: absolute;
+			left:20px;
+			float: top;
+		}
+		.pages #lastpage
+		{
+			border: none;
+			float:left;
+			width: 12px;
+			height: 20px;
+            text-align: center;
+            border:1px solid #1e7db9;
+            box-shadow: 0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;
+            background: -webkit-linear-gradient(top,#42a4e0,#2e88c0);
+            background: -moz-linear-gradient(top,#42a4e0,#2e88c0);
+            background: linear-gradient(top,#42a4e0,#2e88c0);
+		}
+		.pages #nextpage
+		{
+			border: none;
+			float :right;
+			width: 12px;
+			height: 20px;
+            text-align: center;
+            border:1px solid #1e7db9;
+            box-shadow: 0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;
+            background: -webkit-linear-gradient(top,#42a4e0,#2e88c0);
+            background: -moz-linear-gradient(top,#42a4e0,#2e88c0);
+            background: linear-gradient(top,#42a4e0,#2e88c0);
+			
+		}
+		</style>
+	</head>
+	<body background="../../resources/background.png">
+		<div class = title>
+            <p>角色权限管理</p>
+        <hr style="top:93px;height:5px;border:none;border-top:7px ridge red;"/>
+		</div>
+
+		<div class = rightup>
+			<button id="right"> 进入用户角色管理</button>
+		</div>
+
+		<div class="aim">
+			<button id = "search">查询角色</button>
+			<button id = "new">新增角色</button>
+			<button id = "delete">删除角色</button>
+		</div>
+
+		<div class="pages">
+			<button id="lastpage"></button>
+			<p id = "pagestate">0/0页</p>
+			<button id="nextpage"></buuton>
+		</div>
+
+		<div class = "tadd">
+		<table id="usertable">
+			<thead>
+				<tr>
+					<th>角色编号</th>
+					<th>角色名称</th>
+					<th>角色权限查看与更改</th>
+				</tr>
+			</thead>
+            <tbody id = "usertablebody">
+
+			</tbody>
+		</table>
+		</div>
+	</body>
+	<script>
+		require('../controllers/access_control_next_m_render.js')
+	</script>
+</html>

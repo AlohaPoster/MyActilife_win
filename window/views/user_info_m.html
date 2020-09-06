@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .picture{
+            position: absolute;
+            top:150px;
+            left:45%;
+        }
+        .round_icon{
+        width: 144px;
+        height: 144px;
+        display: flex;
+        border-color: #000000;
+        border: 5px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        }
+        .user_info{
+            position: absolute;
+            top:300px;
+            left:40%;
+        }
+        .user_info p{
+        color: #000000;
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+        .title{
+            font-size:24px;
+            font-family: "宋体";
+            position: absolute;
+            top:30px;
+            left:20px;
+        }
+        .tophr{
+            position: absolute;
+            top:100px;
+        }
+        </style>
+    </head>
+    <body background="../../resources/background.png">
+        <div class = title>
+            <p>账户信息管理</p>
+        <hr style="top:93px;height:5px;border:none;border-top:7px ridge red;"/>
+        </div>
+        <div class="picture">
+            <img src="../icon/test.jpg" class="round_icon"  alt="">
+        </div>
+        <div class="user_info">
+            <p id ="one">账户名称:</p>
+            <p id ="two">邮箱:</p>
+            <p id ="three">用户类别:</p>
+        </div>
+    </body>
+    <script>
+        require('../controllers/user_info_m_render.js')
+    </script>
+</html>
