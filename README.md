@@ -1,7 +1,6 @@
 # MyActilife
 - Electron + Python项目 
 - 通信方式 Apache thrift
-- author: 张瑞麟  2019.12.16开始  本科毕业设计项目
 |FolderName|WhatToDo|
 |:--|:--|
 |gen-nodejs|thrift通信自主生成|
